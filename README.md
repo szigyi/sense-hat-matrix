@@ -2,7 +2,9 @@
 ## Usage
 ```python
 from sense_hat import SenseHat
-from Graph import Graph
+from sense_hat_matrix.Graph import Graph
+from sense_hat_matrix.GraphUtil import temp_colour
+from sense_hat_matrix.GraphUtil import rescale
 
 min_temp = 20
 max_temp = 24
@@ -12,6 +14,9 @@ g        = Graph(min_temp, max_temp)
 pixels   = g.render(temp)
 sense.set_pixels(pixels)
 ```
+
+### Example project
+   * [pi Weather Station](https://github.com/szigyi/pi-weather-station)
 
 ## Dev
 ### Install project
