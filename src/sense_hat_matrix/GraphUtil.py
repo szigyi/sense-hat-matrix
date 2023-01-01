@@ -9,11 +9,16 @@ def temp_colour(current, min_colour, middle_colour, max_colour):
         return colour
 
 
-def rescale(minimum, maximum, m):
-    if m <= minimum:
-        return 1
-    elif m >= maximum:
-        return 8
+# https://stats.stackexchange.com/questions/281162/scale-a-number-between-a-range
+def rescale(minimum, maximum, current):
+    new_min = 1
+    new_max = 8
+    original_min = minimum
+    original_max = maximum
+    if current <= original_min:
+        return new_min
+    elif current >= original_max:
+        return new_max
     else:
-        return ((m - minimum) / (maximum - minimum)) * ((8 - 1) + 1) # https://stats.stackexchange.com/questions/281162/scale-a-number-between-a-range
+        return (current - original_min) * (new_max - new_min) / (original_max - original_min) + new_min
 

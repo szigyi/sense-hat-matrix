@@ -2,6 +2,7 @@ import unittest
 
 import GraphUtil
 
+
 class GraphUtilSpec(unittest.TestCase):
 
     def test_should_rescale_less_than_min(self):
@@ -27,7 +28,7 @@ class GraphUtilSpec(unittest.TestCase):
     def test_should_rescale_middle(self):
         result = GraphUtil.rescale(10, 20, 15)
         print(result)
-        assert result == 4, "should_rescale_middle"
+        assert result == 4.5, "should_rescale_middle"
 
 
 if __name__ == "__main__":
