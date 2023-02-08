@@ -1,4 +1,4 @@
-import GraphUtil
+import src.sense_hat_matrix.GraphUtil
 from LedMatrix import LedMatrix
 
 
