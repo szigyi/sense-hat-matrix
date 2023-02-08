@@ -1,4 +1,5 @@
-import src.sense_hat_matrix.GraphUtil
+from GraphUtil import rescale
+from GraphUtil import temp_colour
 from LedMatrix import LedMatrix
 
 
@@ -13,11 +14,11 @@ class Graph:
         self.matrix = LedMatrix()
 
     def render(self, current):
-        scaled_to_index = round(GraphUtil.rescale(self.min, self.max, current)) - 1
+        scaled_to_index = round(rescale(self.min, self.max, current)) - 1
         column = []
         for i in range(7, -1, -1):
             if i <= scaled_to_index:
-                colour = GraphUtil.temp_colour(i, self.B, self.G, self.R)
+                colour = temp_colour(i, self.B, self.G, self.R)
                 dot = colour
             else:
                 dot = self.O
