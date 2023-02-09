@@ -1,7 +1,7 @@
 import unittest
 
-from Graph import Graph
-from PrettyPrint import pretty_print_list
+from sense_hat_matrix.Graph import Graph
+from test.PrettyPrint import pretty_print_list
 
 
 R = [255, 0, 0]  # Red

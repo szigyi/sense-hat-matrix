@@ -1,8 +1,8 @@
-import LedMatrixUtil
+from sense_hat_matrix.LedMatrixUtil import list_to_matrix
 
 
 def pretty_print_list(name_of_test, list_of_matrix):
-    matrix = LedMatrixUtil.list_to_matrix(list_of_matrix)
+    matrix = list_to_matrix(list_of_matrix)
     pretty_print(name_of_test, matrix)
 
 

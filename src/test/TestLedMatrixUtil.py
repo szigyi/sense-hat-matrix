@@ -1,7 +1,8 @@
 import unittest
 
-import LedMatrixUtil
-import PrettyPrint
+from sense_hat_matrix.LedMatrixUtil import list_to_matrix
+from sense_hat_matrix.LedMatrixUtil import shift_matrix_to_left
+from test.PrettyPrint import pretty_print
 
 
 o = [0, 0, 0]  # Black
@@ -13,7 +14,7 @@ class LedMatrixUtilSpec(unittest.TestCase):
 
     def test_should_make_matrix_from_list(self):
         name_of_test = "should_make_matrix_from_list"
-        result = LedMatrixUtil.list_to_matrix([
+        result = list_to_matrix([
             o, o, o, o, o, o, o, R,
             o, o, o, o, o, o, o, R,
             o, o, o, o, o, o, o, R,
@@ -23,7 +24,7 @@ class LedMatrixUtilSpec(unittest.TestCase):
             o, o, o, o, o, o, o, R,
             o, o, o, o, o, o, o, R
             ])
-        PrettyPrint.pretty_print(name_of_test, result)
+        pretty_print(name_of_test, result)
         assert result == [
             [o, o, o, o, o, o, o, R],
             [o, o, o, o, o, o, o, R],
@@ -47,8 +48,8 @@ class LedMatrixUtilSpec(unittest.TestCase):
             [o, o, o, o, o, o, o, R],
             [o, o, o, o, o, o, o, R]
             ]
-        result = LedMatrixUtil.shift_matrix_to_left(matrix)
-        PrettyPrint.pretty_print(name_of_test, result)
+        result = shift_matrix_to_left(matrix)
+        pretty_print(name_of_test, result)
         assert result == [
             [o, o, o, o, o, o, R, o],
             [o, o, o, o, o, o, R, o],

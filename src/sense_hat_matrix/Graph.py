@@ -1,6 +1,6 @@
-from GraphUtil import rescale
-from GraphUtil import temp_colour
-from LedMatrix import LedMatrix
+from sense_hat_matrix.GraphUtil import rescale
+from sense_hat_matrix.GraphUtil import temp_colour
+from sense_hat_matrix.LedMatrix import LedMatrix
 
 
 class Graph:

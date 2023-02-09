@@ -1,10 +1,10 @@
 
-from LedMatrixUtil import MatrixType
-from LedMatrixUtil import ListType
-from LedMatrixUtil import list_to_matrix
-from LedMatrixUtil import matrix_to_list
-from LedMatrixUtil import shift_matrix_to_left
-from LedMatrixUtil import set_column
+from sense_hat_matrix.LedMatrixUtil import MatrixType
+from sense_hat_matrix.LedMatrixUtil import ListType
+from sense_hat_matrix.LedMatrixUtil import list_to_matrix
+from sense_hat_matrix.LedMatrixUtil import matrix_to_list
+from sense_hat_matrix.LedMatrixUtil import shift_matrix_to_left
+from sense_hat_matrix.LedMatrixUtil import set_column
 
 
 # LED Matrix assumes an 8 x 8 LED panel which you can find on the pi's sense-hat
